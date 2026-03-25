@@ -66,7 +66,10 @@
 .download:hover { background: #777; }
 
 @media (max-width: 500px) {
-  .tag { display: none; }
-  .time { min-width: 130px; font-size: 0.8rem; }
-  .tabBtn { padding: 10px 14px; font-size: 0.74rem; }
+  .row { flex-wrap: wrap; gap: 6px; }
+  .time { min-width: 100%; font-size: 0.8rem; margin-bottom: 2px; }
+  .name { flex: 1; font-size: 0.85rem; }
+  .tag { font-size: 0.6rem; padding: 2px 7px; }
+  .tabBtn { padding: 8px 10px; font-size: 0.7rem; letter-spacing: 0.03em; }
+  .pane { padding: 24px 0 0; }
 }

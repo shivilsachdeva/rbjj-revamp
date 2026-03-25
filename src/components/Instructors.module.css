@@ -27,7 +27,36 @@
   font-family: var(--headline); font-size: 1.2rem;
   font-weight: 700; letter-spacing: -0.01em;
 }
-.role { font-size: 0.88rem; font-weight: 500; color: var(--blue); margin-top: -4px; }
+.role { font-size: 0.88rem; font-weight: 500; color: var(--muted); margin-top: 2px; margin-bottom: 10px; }
+
+/* Belt icon */
+.beltWrap { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.belt {
+  display: flex; align-items: center;
+  height: 14px; border-radius: 3px; overflow: hidden;
+  width: 100px; flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.beltTip {
+  width: 18px; height: 100%;
+  background: rgba(0,0,0,0.35);
+  flex-shrink: 0;
+}
+.beltStripes {
+  display: flex; gap: 2px;
+  padding: 0 6px;
+  flex: 1; justify-content: flex-end; align-items: center; height: 100%;
+}
+.beltStripe {
+  width: 6px; height: 8px;
+  border-radius: 1px;
+  border: 1px solid;
+  flex-shrink: 0;
+}
+.beltLabel {
+  font-family: var(--headline); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+}
 
 @media (min-width: 768px) {
   .card { flex-direction: row; text-align: left; gap: 32px; max-width: 560px; }

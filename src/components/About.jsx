@@ -33,7 +33,7 @@ function Carousel({ slides, interval = 5000 }) {
       <div className={styles.carTrack} style={{ transform: `translateX(-${cur * 100}%)` }}>
         {slides.map((s, i) => (
           <div key={i} className={styles.carSlide}>
-            <img src={s.img} alt={s.label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={s.img} alt={s.label} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         ))}
       </div>
