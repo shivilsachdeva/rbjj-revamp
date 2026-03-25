@@ -8,7 +8,6 @@ const SLIDES_1 = [
 ]
 const SLIDES_2 = [
   { img: '/rbjj-revamp/images/gym-1.jpg', label: 'Training' },
-  { img: '/rbjj-revamp/images/gym-2.jpg', label: 'Training' },
   { img: '/rbjj-revamp/images/gym-3.jpg', label: 'Training' },
   { img: '/rbjj-revamp/images/gym-4.jpg', label: 'Training' },
   { img: '/rbjj-revamp/images/gym-5.jpg', label: 'Training' },

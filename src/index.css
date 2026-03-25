@@ -3,7 +3,7 @@
 :root {
   --black:    #0d0d0d;
   --white:    #ffffff;
-  --light:    #f0f2f5;
+  --light:    var(--white);
   --blue:     #4a90c4;
   --text:     #1a1a1a;
   --muted:    #666;

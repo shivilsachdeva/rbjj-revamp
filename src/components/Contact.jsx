@@ -15,7 +15,7 @@ export default function Contact() {
       return
     }
     setError('')
-    // TODO: wire up EmailJS or backend here
+    // TODO: wire up EmailJS or backend
     console.log('Form submission:', form)
     setSent(true)
     setForm({ name: '', phone: '', email: '', message: '' })
@@ -26,7 +26,6 @@ export default function Contact() {
       <div className={styles.wrap}>
         <h2 className={styles.title}>Contact Us</h2>
 
-        {/* Icon row */}
         <div className={styles.icons}>
           <a href="tel:6462488020" className={styles.iconLink} aria-label="Call us">
             <i className="fa fa-phone" />
@@ -39,7 +38,6 @@ export default function Contact() {
           </a>
         </div>
 
-        {/* Form */}
         <div className={styles.formBox}>
           {sent ? (
             <div className={styles.success}>
@@ -64,7 +62,7 @@ export default function Contact() {
               </div>
               <div className={styles.field}>
                 <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell us a bit about yourself — age, experience level, which classes you're interested in..." value={form.message} onChange={update} />
+                <textarea id="message" name="message" placeholder="Tell us about yourself — experience level, which classes you're interested in..." value={form.message} onChange={update} />
               </div>
               {error && <p className={styles.error}>{error}</p>}
               <button type="submit" className={styles.submit}>Send Message</button>
@@ -72,7 +70,6 @@ export default function Contact() {
           )}
         </div>
 
-        {/* Map */}
         <div className={styles.map}>
           <iframe
             title="RBJJ Location"
