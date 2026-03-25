@@ -25,7 +25,7 @@ export default function Navbar() {
       <nav className={styles.navbar}>
         <a href="#hero" className={styles.logo} aria-label="RBJJ Home">
           {/* Replace with: <img src="/images/logo.png" alt="RBJJ Logo" /> */}
-          <div className={`ph ph-dark ${styles.logoPlaceholder}`}>LOGO</div>
+          <img src="/rbjj-revamp/images/logo.png" alt="RBJJ Logo" style={{width:'100%',height:'100%',objectFit:'cover'}} />
         </a>
         <button
           className={`${styles.hamburger} ${open ? styles.open : ''}`}

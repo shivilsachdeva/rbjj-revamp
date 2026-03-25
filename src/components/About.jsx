@@ -1,19 +1,19 @@
 import { useState, useEffect, useRef } from 'react'
 import styles from './About.module.css'
 
-// To add real images, replace the placeholder divs with:
-// <img src="/images/your-photo.jpg" alt="description" />
+// Competition carousel photos
 const SLIDES_1 = [
-  { label: 'COMPETITION PHOTO 1' },
-  { label: 'COMPETITION PHOTO 2' },
-  { label: 'COMPETITION PHOTO 3' },
+  { img: '/rbjj-revamp/images/comp-1.jpg', label: 'Competition 1' },
+  { img: '/rbjj-revamp/images/comp-2.jpg', label: 'Competition 2' },
+  { img: '/rbjj-revamp/images/comp-3.jpg', label: 'Competition 3' },
 ]
+// Gym/class carousel photos
 const SLIDES_2 = [
-  { label: 'GYM / CLASS PHOTO 1' },
-  { label: 'GYM / CLASS PHOTO 2' },
-  { label: 'GYM / CLASS PHOTO 3' },
-  { label: 'GYM / CLASS PHOTO 4' },
-  { label: 'GYM / CLASS PHOTO 5' },
+  { img: '/rbjj-revamp/images/gym-1.png', label: 'Class 1' },
+  { img: '/rbjj-revamp/images/gym-2.png', label: 'Class 2' },
+  { img: '/rbjj-revamp/images/gym-3.jpg', label: 'Class 3' },
+  { img: '/rbjj-revamp/images/gym-4.png', label: 'Class 4' },
+  { img: '/rbjj-revamp/images/gym-5.png', label: 'Class 5' },
 ]
 
 function Carousel({ slides, interval = 5000 }) {
@@ -33,8 +33,7 @@ function Carousel({ slides, interval = 5000 }) {
       <div className={styles.carTrack} style={{ transform: `translateX(-${cur * 100}%)` }}>
         {slides.map((s, i) => (
           <div key={i} className={styles.carSlide}>
-            {/* Swap placeholder div for <img src="..." alt="..." /> */}
-            <div className="ph" style={{ height: '100%' }}>{s.label}</div>
+            <img src={s.img} alt={s.label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         ))}
       </div>

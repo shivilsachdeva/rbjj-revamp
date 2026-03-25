@@ -4,25 +4,25 @@ const INSTRUCTORS = [
   {
     name: 'Radji Bryson-Barrett',
     role: 'Head Black Belt | Head Instructor',
-    // img: '/images/radji.jpg',
+    img: '/rbjj-revamp/images/radji.jpg',
     initials: 'RB',
   },
   {
     name: 'Shlok Sachdeva',
     role: 'Blue Belt | Kids Coach',
-    // img: '/images/shlok.jpg',
+    img: '/rbjj-revamp/images/shlok.png',
     initials: 'SS',
   },
   {
     name: 'Shivil Sachdeva',
     role: 'Instructor',
-    // img: '/images/shivil.jpg',
+    img: '/rbjj-revamp/images/shivil.png',
     initials: 'SV',
   },
   {
     name: 'Angel Ortiz',
     role: 'Kids Coach',
-    // img: '/images/angel.jpg',
+    img: '/rbjj-revamp/images/angel.png',
     initials: 'AO',
   },
 ]
