@@ -71,14 +71,15 @@ export default function Contact() {
         </div>
 
         <div className={styles.map}>
-          <iframe
-            title="RBJJ Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.817!2d-74.31271!3d40.53600!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b85b2e2aaaab%3A0x1!2s540+New+Brunswick+Ave%2C+Fords%2C+NJ+08863!5e0!3m2!1sen!2sus!4v1700000000000"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
+  <iframe
+    title="RBJJ Location"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.5919818862594!2d-74.3137691!3d40.528508699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c92b04ae6c3b%3A0xdf104e75c083f332!2sRadji%20Barrett%20Jiu%20Jitsu!5e0!3m2!1sen!2sus!4v1774457378783!5m2!1sen!2sus"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
       </div>
     </section>
   )
