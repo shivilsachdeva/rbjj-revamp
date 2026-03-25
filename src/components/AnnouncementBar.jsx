@@ -1,36 +1,71 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from './AnnouncementBar.module.css'
 
 export default function AnnouncementBar() {
-  const [visible, setVisible] = useState(false)
-  const [dismissed, setDismissed] = useState(false)
-
-  useEffect(() => {
-    // Show after short delay so page loads first
-    const t = setTimeout(() => setVisible(true), 1200)
-    return () => clearTimeout(t)
-  }, [])
-
-  if (dismissed) return null
+  const [open, setOpen] = useState(false)
 
   return (
-    <div className={`${styles.overlay} ${visible ? styles.show : ''}`} onClick={() => setDismissed(true)}>
-      <div className={styles.bar} onClick={e => e.stopPropagation()}>
-        <div className={styles.inner}>
-          <div className={styles.label}>📣 Upcoming</div>
-          <h2 className={styles.title}>Seminars</h2>
-          <p className={styles.body}>
-            Stay tuned for upcoming seminars at Radji Barrett Jiu Jitsu Academy.
-            Check back soon or contact us for details.
-          </p>
-          <a href="#contact" className={styles.cta} onClick={() => setDismissed(true)}>
-            Get Notified
-          </a>
-        </div>
-        <button className={styles.close} onClick={() => setDismissed(true)} aria-label="Close">
-          ✕
-        </button>
+    <>
+      {/* Top banner strip */}
+      <div className={styles.banner} onClick={() => setOpen(true)}>
+        <span className={styles.bannerDot} />
+        <span className={styles.bannerText}>Upcoming Seminar — Uriah Hall · April 18</span>
+        <span className={styles.bannerArrow}>→</span>
       </div>
-    </div>
+
+      {/* Modal */}
+      {open && (
+        <div className={styles.overlay} onClick={() => setOpen(false)}>
+          <div className={styles.modal} onClick={e => e.stopPropagation()}>
+            <button className={styles.close} onClick={() => setOpen(false)} aria-label="Close">✕</button>
+
+            {/* Polaroid / framed flyer */}
+            <div className={styles.polaroid}>
+              <div className={styles.polaroidInner}>
+                <img src="/rbjj-revamp/images/seminar.png" alt="Uriah Hall Seminar Flyer" />
+              </div>
+              <div className={styles.polaroidCaption}>
+                Saturday, April 18 · 11AM–2PM · $150
+              </div>
+            </div>
+
+            <div className={styles.modalBody}>
+              <p className={styles.modalEyebrow}>📣 Upcoming Event</p>
+              <h2 className={styles.modalTitle}>Uriah Hall<br/>Striking Seminar</h2>
+              <p className={styles.modalText}>
+                Radji Barrett Jiu Jitsu Academy presents a <strong>3-hour striking seminar</strong> with
+                UFC veteran and striking specialist <strong>Uriah Hall</strong>.
+                Open to all skill levels.
+              </p>
+              <div className={styles.details}>
+                <div className={styles.detailRow}>
+                  <span className={styles.detailLabel}>Date</span>
+                  <span className={styles.detailVal}>Saturday, April 18</span>
+                </div>
+                <div className={styles.detailRow}>
+                  <span className={styles.detailLabel}>Time</span>
+                  <span className={styles.detailVal}>11AM – 2PM</span>
+                </div>
+                <div className={styles.detailRow}>
+                  <span className={styles.detailLabel}>Price</span>
+                  <span className={styles.detailVal}>$150</span>
+                </div>
+                <div className={styles.detailRow}>
+                  <span className={styles.detailLabel}>Location</span>
+                  <span className={styles.detailVal}>540 New Brunswick Ave, Fords NJ</span>
+                </div>
+              </div>
+              <a
+                href="#contact"
+                className={styles.modalCta}
+                onClick={() => setOpen(false)}
+              >
+                Contact Us to Register
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }

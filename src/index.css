@@ -24,6 +24,12 @@ body {
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 
+/* Mobile font scale boost */
+@media (max-width: 600px) {
+  h2 { font-size: 1.6rem !important; }
+  p, li { font-size: 0.95rem; }
+}
+
 /* Placeholder helper */
 .ph {
   background: linear-gradient(135deg, #c8cdd5 0%, #a8b0ba 100%);

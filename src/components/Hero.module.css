@@ -1,40 +1,45 @@
 .hero {
-  position: relative; height: 100vh; min-height: 640px;
+  position: relative; height: 100vh; min-height: 600px;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  text-align: center; padding-top: 80px; overflow: hidden;
+  text-align: center; padding: 116px 24px 40px; overflow: hidden;
 }
 
 .bg {
   position: absolute; inset: 0;
 }
-.bg > * { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bg > * { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .bg::after {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.52));
+  background: linear-gradient(rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.65) 100%);
 }
 
 .content {
-  position: relative; z-index: 2; padding: 0 20px;
+  position: relative; z-index: 2; padding: 0;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0;
 }
 
 .title {
   font-family: var(--headline);
-  font-size: clamp(2.8rem, 10vw, 7rem);
-  font-weight: 900; line-height: 0.95;
-  letter-spacing: 0.01em;
+  font-size: clamp(3rem, 11vw, 7.5rem);
+  font-weight: 800; line-height: 0.93;
+  letter-spacing: 0.02em;
   color: #fff; text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
-.buttons { flex-direction: column; align-items: center; gap: 12px; }
+.buttons {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 12px; width: 100%;
+}
 
 .btn {
   display: inline-block;
   font-family: var(--body); font-size: 0.75rem;
   font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
-  padding: 14px 32px; min-width: 240px;
+  padding: 14px 32px; width: 260px; max-width: 100%;
   text-align: center; transition: all 0.22s; cursor: pointer;
 }
 .btnOutline {
@@ -50,5 +55,6 @@
 
 @media (min-width: 600px) {
   .buttons { flex-direction: row; justify-content: center; }
-  .btn { min-width: 200px; }
+  .btn { width: auto; min-width: 200px; }
 }
+
