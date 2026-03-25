@@ -18,7 +18,7 @@ export default function AnnouncementBar({ openWaiver, onOpenWaiver, onCloseWaive
           <div className={styles.modal} onClick={e => e.stopPropagation()}>
             <button className={styles.close} onClick={() => setOpen(false)} aria-label="Close">✕</button>
             <div className={styles.modalImg}>
-              <img src="/rbjj-revamp/images/seminar.png" alt="Uriah Hall Seminar Flyer" />
+              <img src="/images/seminar.png" alt="Uriah Hall Seminar Flyer" />
             </div>
             <a href="#contact" className={styles.modalCta} onClick={() => setOpen(false)}>
               Contact Us to Register

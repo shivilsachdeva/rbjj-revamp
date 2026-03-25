@@ -4,7 +4,7 @@ export default function Hero({ onOpenWaiver }) {
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.bg}>
-        <img src="/rbjj-revamp/images/hero.jpg" alt="Radji Barrett competing" />
+        <img src="/images/hero.jpg" alt="Radji Barrett competing" />
       </div>
       <div className={styles.content}>
         <h1 className={styles.title}>

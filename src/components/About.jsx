@@ -2,16 +2,16 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './About.module.css'
 
 const SLIDES_1 = [
-  { img: '/rbjj-revamp/images/comp-1.png', label: 'Competition' },
-  { img: '/rbjj-revamp/images/comp-2.png', label: 'Competition' },
-  { img: '/rbjj-revamp/images/comp-3.jpg', label: 'Competition' },
+  { img: '/images/comp-1.png', label: 'Competition' },
+  { img: '/images/comp-2.png', label: 'Competition' },
+  { img: '/images/comp-3.jpg', label: 'Competition' },
 ]
 const SLIDES_2 = [
-  { img: '/rbjj-revamp/images/gym-1.jpg', label: 'Training' },
-  { img: '/rbjj-revamp/images/gym-3.jpg', label: 'Training' },
-  { img: '/rbjj-revamp/images/gym-4.jpg', label: 'Training' },
-  { img: '/rbjj-revamp/images/gym-5.jpg', label: 'Training' },
-  { img: '/rbjj-revamp/images/gym-6.png', label: 'Training' },
+  { img: '/images/gym-1.jpg', label: 'Training' },
+  { img: '/images/gym-3.jpg', label: 'Training' },
+  { img: '/images/gym-4.jpg', label: 'Training' },
+  { img: '/images/gym-5.jpg', label: 'Training' },
+  { img: '/images/gym-6.png', label: 'Training' },
 ]
 
 function Carousel({ slides, interval = 5000 }) {
