@@ -9,7 +9,7 @@ const INSTRUCTORS = [
   },
   {
     name: 'Shlok Sachdeva',
-    role: 'Black Belt | Kids Coach',
+    role: 'Black Belt | Instructor',
     img: '/rbjj-revamp/images/shlok.png',
     initials: 'SS',
   },
@@ -21,7 +21,7 @@ const INSTRUCTORS = [
   },
   {
     name: 'Angel Ortiz',
-    role: 'Kids Coach',
+    role: 'Blue Belt | Kids Coach',
     img: '/rbjj-revamp/images/angel.png',
     initials: 'AO',
   },
