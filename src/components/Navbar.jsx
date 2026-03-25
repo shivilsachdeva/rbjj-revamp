@@ -10,11 +10,8 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-
-  // close drawer on outside click via overlay
   const close = () => setOpen(false)
 
-  // prevent body scroll when drawer open
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -24,9 +21,9 @@ export default function Navbar() {
     <>
       <nav className={styles.navbar}>
         <a href="#hero" className={styles.logo} aria-label="RBJJ Home">
-          {/* Replace with: <img src="/images/logo.png" alt="RBJJ Logo" /> */}
-          <img src="/rbjj-revamp/images/logo.png" alt="RBJJ Logo" style={{width:'100%',height:'100%',objectFit:'cover'}} />
+          <img src="/rbjj-revamp/images/logo.png" alt="RBJJ Logo" style={{width:'100%',height:'100%',objectFit:'contain'}} />
         </a>
+        <a href="#schedule" className={styles.scheduleBtn}>View Schedule</a>
         <button
           className={`${styles.hamburger} ${open ? styles.open : ''}`}
           onClick={() => setOpen(o => !o)}
@@ -37,7 +34,6 @@ export default function Navbar() {
       </nav>
 
       {open && <div className={styles.overlay} onClick={close} />}
-
       <div className={`${styles.drawer} ${open ? styles.drawerOpen : ''}`}>
         {links.map(l => (
           <a key={l.href} href={l.href} onClick={close}>{l.label}</a>

@@ -1,26 +1,24 @@
 import { useState, useEffect, useRef } from 'react'
 import styles from './About.module.css'
 
-// Competition carousel photos
 const SLIDES_1 = [
-  { img: '/rbjj-revamp/images/comp-1.jpg', label: 'Competition 1' },
-  { img: '/rbjj-revamp/images/comp-2.jpg', label: 'Competition 2' },
-  { img: '/rbjj-revamp/images/comp-3.jpg', label: 'Competition 3' },
+  { img: '/rbjj-revamp/images/comp-1.png', label: 'Competition' },
+  { img: '/rbjj-revamp/images/comp-2.png', label: 'Competition' },
+  { img: '/rbjj-revamp/images/comp-3.jpg', label: 'Competition' },
 ]
-// Gym/class carousel photos
 const SLIDES_2 = [
-  { img: '/rbjj-revamp/images/gym-1.png', label: 'Class 1' },
-  { img: '/rbjj-revamp/images/gym-2.png', label: 'Class 2' },
-  { img: '/rbjj-revamp/images/gym-3.jpg', label: 'Class 3' },
-  { img: '/rbjj-revamp/images/gym-4.png', label: 'Class 4' },
-  { img: '/rbjj-revamp/images/gym-5.png', label: 'Class 5' },
+  { img: '/rbjj-revamp/images/gym-1.jpg', label: 'Training' },
+  { img: '/rbjj-revamp/images/gym-2.jpg', label: 'Training' },
+  { img: '/rbjj-revamp/images/gym-3.jpg', label: 'Training' },
+  { img: '/rbjj-revamp/images/gym-4.jpg', label: 'Training' },
+  { img: '/rbjj-revamp/images/gym-5.jpg', label: 'Training' },
+  { img: '/rbjj-revamp/images/gym-6.png', label: 'Training' },
 ]
 
 function Carousel({ slides, interval = 5000 }) {
   const [cur, setCur] = useState(0)
   const total = slides.length
   const timer = useRef(null)
-
   const go = (i) => setCur((i + total) % total)
 
   useEffect(() => {
@@ -33,16 +31,12 @@ function Carousel({ slides, interval = 5000 }) {
       <div className={styles.carTrack} style={{ transform: `translateX(-${cur * 100}%)` }}>
         {slides.map((s, i) => (
           <div key={i} className={styles.carSlide}>
-            <img src={s.img} alt={s.label} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={s.img} alt={s.label} loading="lazy" />
           </div>
         ))}
       </div>
-      <button className={`${styles.carBtn} ${styles.prev}`} onClick={() => go(cur - 1)}>
-        <i className="fa fa-chevron-left" />
-      </button>
-      <button className={`${styles.carBtn} ${styles.next}`} onClick={() => go(cur + 1)}>
-        <i className="fa fa-chevron-right" />
-      </button>
+      <button className={`${styles.carBtn} ${styles.prev}`} onClick={() => go(cur - 1)}><i className="fa fa-chevron-left" /></button>
+      <button className={`${styles.carBtn} ${styles.next}`} onClick={() => go(cur + 1)}><i className="fa fa-chevron-right" /></button>
       <div className={styles.dots}>
         {slides.map((_, i) => (
           <button key={i} className={`${styles.dot} ${i === cur ? styles.dotOn : ''}`} onClick={() => go(i)} />

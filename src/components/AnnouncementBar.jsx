@@ -6,60 +6,43 @@ export default function AnnouncementBar() {
 
   return (
     <>
-      {/* Top banner strip */}
       <div className={styles.banner} onClick={() => setOpen(true)}>
         <span className={styles.bannerDot} />
         <span className={styles.bannerText}>Upcoming Seminar — Uriah Hall · April 18</span>
         <span className={styles.bannerArrow}>→</span>
       </div>
 
-      {/* Modal */}
       {open && (
         <div className={styles.overlay} onClick={() => setOpen(false)}>
           <div className={styles.modal} onClick={e => e.stopPropagation()}>
             <button className={styles.close} onClick={() => setOpen(false)} aria-label="Close">✕</button>
 
-            {/* Polaroid / framed flyer */}
-            <div className={styles.polaroid}>
-              <div className={styles.polaroidInner}>
-                <img src="/rbjj-revamp/images/seminar.png" alt="Uriah Hall Seminar Flyer" />
-              </div>
-              <div className={styles.polaroidCaption}>
-                Saturday, April 18 · 11AM–2PM · $150
-              </div>
+            <div className={styles.modalImg}>
+              <img src="/rbjj-revamp/images/seminar.png" alt="Uriah Hall Seminar Flyer" />
+            </div>
+
+            <div className={styles.modalMeta}>
+              Saturday, April 18 · 11AM–2PM · $150
             </div>
 
             <div className={styles.modalBody}>
               <p className={styles.modalEyebrow}>📣 Upcoming Event</p>
-              <h2 className={styles.modalTitle}>Uriah Hall<br/>Striking Seminar</h2>
+              <h2 className={styles.modalTitle}>Uriah Hall<br />Striking Seminar</h2>
               <p className={styles.modalText}>
                 Radji Barrett Jiu Jitsu Academy presents a <strong>3-hour striking seminar</strong> with
-                UFC veteran and striking specialist <strong>Uriah Hall</strong>.
-                Open to all skill levels.
+                UFC veteran and striking specialist <strong>Uriah Hall</strong>. Open to all skill levels.
               </p>
-              <div className={styles.details}>
-                <div className={styles.detailRow}>
-                  <span className={styles.detailLabel}>Date</span>
-                  <span className={styles.detailVal}>Saturday, April 18</span>
-                </div>
-                <div className={styles.detailRow}>
-                  <span className={styles.detailLabel}>Time</span>
-                  <span className={styles.detailVal}>11AM – 2PM</span>
-                </div>
-                <div className={styles.detailRow}>
-                  <span className={styles.detailLabel}>Price</span>
-                  <span className={styles.detailVal}>$150</span>
-                </div>
-                <div className={styles.detailRow}>
-                  <span className={styles.detailLabel}>Location</span>
-                  <span className={styles.detailVal}>540 New Brunswick Ave, Fords NJ</span>
-                </div>
-              </div>
-              <a
-                href="#contact"
-                className={styles.modalCta}
-                onClick={() => setOpen(false)}
-              >
+
+              <table className={styles.details}>
+                <tbody>
+                  <tr><td>Date</td><td>Saturday, April 18</td></tr>
+                  <tr><td>Time</td><td>11AM – 2PM</td></tr>
+                  <tr><td>Price</td><td>$150</td></tr>
+                  <tr><td>Location</td><td>540 New Brunswick Ave, Fords NJ</td></tr>
+                </tbody>
+              </table>
+
+              <a href="#contact" className={styles.modalCta} onClick={() => setOpen(false)}>
                 Contact Us to Register
               </a>
             </div>

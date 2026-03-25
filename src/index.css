@@ -10,35 +10,32 @@
   --border:   #ddd;
   --headline: 'Barlow Condensed', sans-serif;
   --body:     'DM Sans', sans-serif;
+
+  /* Type scale matching live site */
+  --fs-h2:        35px;
+  --fs-body-lg:   21px;
+  --fs-body:      16.8px;
+  --fs-sub:       16.8px;
 }
 
 html { scroll-behavior: smooth; }
-
 body {
   font-family: var(--body);
   color: var(--text);
   background: var(--white);
   overflow-x: hidden;
+  font-size: var(--fs-body);
+  line-height: 1.65;
 }
-
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 
-/* Mobile font scale boost */
-@media (max-width: 600px) {
-  h2 { font-size: 1.6rem !important; }
-  p, li { font-size: 0.95rem; }
-}
-
-/* Placeholder helper */
 .ph {
   background: linear-gradient(135deg, #c8cdd5 0%, #a8b0ba 100%);
   display: flex; align-items: center; justify-content: center;
-  color: rgba(255,255,255,0.7);
-  font-family: var(--headline);
-  font-weight: 700; letter-spacing: 0.04em;
-  text-transform: uppercase; font-size: 0.75rem;
-  text-align: center; padding: 8px;
+  color: rgba(255,255,255,0.7); font-family: var(--headline);
+  font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  font-size: 0.75rem; text-align: center; padding: 8px;
   width: 100%; height: 100%;
 }
 .ph-dark {

@@ -4,8 +4,7 @@ export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.bg}>
-        {/* Replace this div with: <img src="/images/hero.jpg" alt="" /> */}
-        <img src="/rbjj-revamp/images/hero.jpg" alt="Radji Barrett competing" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top'}} />
+        <img src="/rbjj-revamp/images/hero.jpg" alt="Radji Barrett competing" />
       </div>
       <div className={styles.content}>
         <h1 className={styles.title}>
