@@ -4,8 +4,9 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <p>
-      <a href="https://shivil.co" target="_blank" rel="noreferrer">
-        © {new Date().getFullYear()} Designed By Vitruvian Media{' '}
+        © {new Date().getFullYear()} Radji Barrett Jiu Jitsu Academy · Fords, NJ ·{' '}
+        <a href="https://instagram.com/radjibarrettjiujitsu" target="_blank" rel="noreferrer">
+          @radjibarrettjiujitsu
         </a>
       </p>
     </footer>
