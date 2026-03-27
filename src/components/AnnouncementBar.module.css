@@ -117,7 +117,7 @@
 
 @media (max-width: 600px) {
   .overlay { padding: 40px 16px; margin-bottom: 75px; }
-  .modalImg { padding: 12px 12px 12px; }
+  .modalImg { padding: 12px 12px 0; }
   .modalBody { padding: 16px 18px 24px; }
   .modalTitle { font-size: 18px; }
   .modalText { font-size: 14px; }
