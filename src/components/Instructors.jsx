@@ -9,19 +9,19 @@ const INSTRUCTORS = [
   },
   {
     name: 'Shlok Sachdeva',
-    role: 'Black Belt | Instructor',
+    role: 'Black Belt | Coach',
     img: '/images/shlok.png',
     initials: 'SS',
   },
   {
     name: 'Shivil Sachdeva',
-    role: 'Black Belt | Instructor',
+    role: 'Black Belt | Coach',
     img: '/images/shivil.png',
     initials: 'SV',
   },
   {
     name: 'Angel Ortiz',
-    role: 'Kids Coach',
+    role: 'Blue Belt | Kids Coach',
     img: '/images/angel.png',
     initials: 'AO',
   },
