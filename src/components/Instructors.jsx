@@ -9,7 +9,7 @@ const INSTRUCTORS = [
   },
   {
     name: 'Shlok Sachdeva',
-    role: 'Black Belt | Kids Coach',
+    role: 'Black Belt | Instructor',
     img: '/images/shlok.png',
     initials: 'SS',
   },
