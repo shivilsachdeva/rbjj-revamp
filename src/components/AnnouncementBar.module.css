@@ -6,10 +6,8 @@
   padding: 0 16px; cursor: pointer; transition: background 0.2s;
   text-decoration: none;
   height: 36px; min-height: 36px;
-  transition: transform 0.3s, opacity 0.3s;
 }
 .banner:hover { background: #222; }
-.bannerHidden { transform: translateY(-100%); pointer-events: none; opacity: 0; }
 .bannerDot {
   width: 6px; height: 6px; border-radius: 50%; background: #c8e87a; flex-shrink: 0;
   animation: pulse 2s infinite;

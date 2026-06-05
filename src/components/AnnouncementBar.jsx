@@ -1,21 +1,9 @@
-import { useState, useEffect } from 'react'
 import styles from './AnnouncementBar.module.css'
 
 export default function AnnouncementBar({ openWaiver, onOpenWaiver, onCloseWaiver }) {
-  const [visible, setVisible] = useState(true)
-
-  useEffect(() => {
-    const onScroll = () => {
-      const halfway = document.documentElement.scrollHeight * 0.5
-      setVisible(window.scrollY + window.innerHeight < halfway)
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
   return (
     <>
-      <a href="#contact" className={`${styles.banner} ${visible ? '' : styles.bannerHidden}`}>
+      <a href="#contact" className={styles.banner}>
         <span className={styles.bannerDot} />
         <span className={styles.bannerText}>Come in for a free trial class today!</span>
       </a>
