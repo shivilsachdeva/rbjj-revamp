@@ -1,10 +1,31 @@
+import { useState, useEffect } from 'react'
 import styles from './Hero.module.css'
 
+const HERO_IMAGES = [
+  '/images/hero.jpg',
+  '/images/comp-2.jpg',
+  '/images/comp-3.jpg',
+]
+
 export default function Hero({ onOpenWaiver }) {
+  const [cur, setCur] = useState(0)
+
+  useEffect(() => {
+    const id = setInterval(() => setCur(c => (c + 1) % HERO_IMAGES.length), 8000)
+    return () => clearInterval(id)
+  }, [])
+
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.bg}>
-        <img src="/images/hero.jpg" alt="Radji Barrett competing" />
+        {HERO_IMAGES.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt="Radji Barrett Jiu Jitsu"
+            className={i === cur ? styles.bgActive : styles.bgHidden}
+          />
+        ))}
       </div>
       <div className={styles.content}>
         <h1 className={styles.title}>

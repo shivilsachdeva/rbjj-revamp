@@ -1,5 +1,5 @@
-#contact { background: #fafafa; }
-.section { background: #fafafa; text-align: center; padding: 80px 24px; }
+#contact { background: #f7f7f7; }
+.section { background: #f7f7f7; text-align: center; padding: 60px 16px; }
 .wrap { max-width: 580px; margin: 0 auto; }
 
 /* Match schedule title style */
