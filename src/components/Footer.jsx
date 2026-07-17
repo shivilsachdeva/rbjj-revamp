@@ -21,7 +21,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <p className={styles.credit}><a href="https://www.shivil.co" target="_blank" rel="noreferrer">Designed by Vitruvian Media</a></p>
+      <p className={styles.credit}><a href="https://shivil.co" target="_blank" rel="noreferrer">Designed by Vitruvian Media</a></p>
     </footer>
   )
 }
