@@ -4,7 +4,7 @@ const PROGRAMS = [
   'Adult Jiu Jitsu (Gi & NoGi)',
   'Kids Jiu Jitsu (Gi & NoGi)',
   'Wrestling',
-  'Kickboxing',
+  'Striking',
 ]
 
 export default function Programs() {
