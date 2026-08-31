@@ -12,14 +12,14 @@ const DAYS = [
     { time: '5:00 – 5:45 PM',      name: 'Kids BJJ (Ages 5–8)',  tag: 'Kids · NoGi',  tagClass: 'kids' },
     { time: '5:45 – 6:30 PM',      name: 'Kids BJJ (Ages 9–12)', tag: 'Kids · NoGi',  tagClass: 'kids' },
     { time: '6:30 – 7:30 PM',      name: 'Adult Kickboxing',     tag: 'Kickboxing',   tagClass: 'kick' },
-    { time: '7:30 – 8:30 PM',      name: 'Adult BJJ',            tag: 'Adult · NoGi', tagClass: 'nogi' },
+    { time: '7:30 – 8:30 PM',      name: 'Adult Wrestling',      tag: 'Wrestling',    tagClass: 'nogi' },
     { time: '8:30 – 9:30 PM',      name: 'Open Mat',             tag: 'Open Mat',     tagClass: 'open' },
   ]},
   { id: 'wed', label: 'Wed', classes: [
     { time: '5:00 – 5:45 PM',      name: 'Kids BJJ (Ages 5–8)',  tag: 'Kids · Gi',    tagClass: 'kids' },
     { time: '5:45 – 6:30 PM',      name: 'Kids BJJ (Ages 9–12)', tag: 'Kids · Gi',    tagClass: 'kids' },
-    { time: '6:30 – 7:30 PM',      name: 'Adult Fundamentals',   tag: 'Adult · Gi',   tagClass: 'gi'   },
-    { time: '7:30 – 8:30 PM',      name: 'Open Mat',             tag: 'Open Mat',     tagClass: 'open' },
+    { time: '6:30 – 7:30 PM',      name: 'Adult BJJ',            tag: 'Adult · Gi',   tagClass: 'gi'   },
+    { time: '7:30 – 9:00 PM',      name: 'Open Mat',             tag: 'Open Mat',     tagClass: 'open' },
   ]},
   { id: 'thu', label: 'Thu', classes: [
     { time: '12:00 – 1:30 PM',     name: 'Adult BJJ',            tag: 'Adult · Gi',   tagClass: 'gi'   },
@@ -33,16 +33,18 @@ const DAYS = [
     { time: '10:00 AM – 12:00 PM', name: 'Adult BJJ',            tag: 'Adult · Gi',   tagClass: 'gi'   },
     { time: '5:00 – 5:45 PM',      name: 'Kids BJJ (Ages 5–8)',  tag: 'Kids · Gi',    tagClass: 'kids' },
     { time: '5:45 – 6:30 PM',      name: 'Kids BJJ (Ages 9–12)', tag: 'Kids · Gi',    tagClass: 'kids' },
-    { time: '6:30 – 8:00 PM',      name: 'Study Session',        tag: 'Study',        tagClass: 'study'},
+    { time: '6:30 – 7:30 PM',      name: 'Adult BJJ',            tag: 'Adult · NoGi', tagClass: 'nogi' },
+    { time: '7:30 – 9:00 PM',      name: 'Study Session',        tag: 'Study',        tagClass: 'study'},
   ]},
   { id: 'sat', label: 'Sat', classes: [
-    { time: '9:00 – 10:00 AM',     name: 'NoGi Fundamentals',    tag: 'NoGi',         tagClass: 'nogi' },
+    { time: '9:00 – 10:00 AM',     name: 'Adult BJJ',            tag: 'Adult · NoGi', tagClass: 'nogi' },
     { time: '10:00 – 11:00 AM',    name: 'Adult Kickboxing',     tag: 'Kickboxing',   tagClass: 'kick' },
     { time: '11:00 AM – 12:00 PM', name: 'Adult BJJ',            tag: 'Adult · Gi',   tagClass: 'gi'   },
     { time: '12:00 – 1:00 PM',     name: 'Open Mat',             tag: 'Open Mat',     tagClass: 'open' },
   ]},
   { id: 'sun', label: 'Sun', classes: [
     { time: '10:00 AM – 12:00 PM', name: 'Open Mat',             tag: 'Open Mat',     tagClass: 'open' },
+    { time: '6:00 – 8:00 PM',      name: 'Open Mat',             tag: 'Open Mat',     tagClass: 'open' },
   ]},
 ]
 
