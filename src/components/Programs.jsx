@@ -3,8 +3,7 @@ import styles from './Programs.module.css'
 const PROGRAMS = [
   'Adult Jiu Jitsu (Gi & NoGi)',
   'Kids Jiu Jitsu (Gi & NoGi)',
-  'Wrestling',
-  'Striking',
+  'Wrestling + Striking',
 ]
 
 export default function Programs() {

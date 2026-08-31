@@ -32,6 +32,12 @@ const INSTRUCTORS = [
     role: 'Kids Classes',
     img: '/images/angel.png',
   },
+  {
+    name: 'Sergio Cespedes',
+    belt: 'Blue Belt',
+    role: 'Wrestling Coach',
+    img: '/images/sergio.jpg',
+  },
 ]
 
 export default function Instructors() {
@@ -80,14 +86,16 @@ export default function Instructors() {
           <div className={styles.track} style={{ transform: `translateX(-${cur * 100}%)` }}>
             {INSTRUCTORS.map((inst, i) => (
               <div key={i} className={styles.slide}>
-                <img src={inst.img} alt={inst.name} />
+                {inst.img
+                  ? <img src={inst.img} alt={inst.name} />
+                  : <div className={styles.noPhoto}>{inst.name.split(' ').map(w => w[0]).join('')}</div>}
               </div>
             ))}
           </div>
 
           <div className={styles.text}>
             <h3 className={styles.name}>{p.name}</h3>
-            <span className={styles.info}>{p.belt} · {p.role}</span>
+            <span className={styles.info}>{p.belt ? `${p.belt} · ${p.role}` : p.role}</span>
           </div>
 
           <button className={`${styles.arrow} ${styles.arrowLeft}`} onClick={handlePrev} aria-label="Previous instructor">
