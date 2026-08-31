@@ -6,20 +6,20 @@ const DAYS = [
     { time: '5:00 – 5:45 PM',            name: 'Kids Gi (Ages 5–8)',        tag: 'Kids · Gi',         tagClass: 'kids',   type: 'gi' },
     { time: '5:45 – 6:30 PM',            name: 'Kids Gi (Ages 9–13)',       tag: 'Kids · Gi',         tagClass: 'kids',   type: 'gi' },
     { time: '6:30 – 7:30 PM',            name: 'Adult BJJ',                 tag: 'Adult · Gi',        tagClass: 'gi',     type: 'gi' },
-    { time: '7:30 – 9:00 PM',            name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'other' },
+    { time: '7:30 – 9:00 PM',            name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'open' },
   ]},
   { id: 'tue', label: 'Tue', classes: [
     { time: '5:00 – 5:45 PM',            name: 'Kids NoGi (Ages 5–8)',      tag: 'Kids · NoGi',       tagClass: 'kids',   type: 'nogi' },
     { time: '5:45 – 6:30 PM',            name: 'Kids NoGi (Ages 9–13)',     tag: 'Kids · NoGi',       tagClass: 'kids',   type: 'nogi' },
     { time: '6:30 – 7:30 PM',            name: 'Striking',                  tag: 'Striking',          tagClass: 'kick',   type: 'striking' },
     { time: '7:30 – 8:30 PM',            name: 'Adult Wrestling',           tag: 'Adult · NoGi',      tagClass: 'nogi',   type: 'nogi' },
-    { time: '8:30 – 9:30 PM',            name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'other' },
+    { time: '8:30 – 9:30 PM',            name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'open' },
   ]},
   { id: 'wed', label: 'Wed', classes: [
     { time: '5:00 – 5:45 PM',            name: 'Kids Gi (Ages 5–8)',        tag: 'Kids · Gi',         tagClass: 'kids',   type: 'gi' },
     { time: '5:45 – 6:30 PM',            name: 'Kids Gi (Ages 9–13)',       tag: 'Kids · Gi',         tagClass: 'kids',   type: 'gi' },
     { time: '6:30 – 7:30 PM',            name: 'Adult BJJ',                 tag: 'Adult · Gi',        tagClass: 'gi',     type: 'gi' },
-    { time: '7:30 – 9:00 PM',            name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'other' },
+    { time: '7:30 – 9:00 PM',            name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'open' },
   ]},
   { id: 'thu', label: 'Thu', classes: [
     { time: '12:00 – 1:30 PM',           name: 'Adult BJJ',                 tag: 'Adult · Gi',        tagClass: 'gi',     type: 'gi' },
@@ -27,7 +27,7 @@ const DAYS = [
     { time: '5:45 – 6:30 PM',            name: 'Kids NoGi (Ages 9–13)',     tag: 'Kids · NoGi',       tagClass: 'kids',   type: 'nogi' },
     { time: '6:30 – 7:30 PM',            name: 'Striking',                  tag: 'Striking',          tagClass: 'kick',   type: 'striking' },
     { time: '7:30 – 8:30 PM',            name: 'Adult BJJ',                 tag: 'Adult · NoGi',      tagClass: 'nogi',   type: 'nogi' },
-    { time: '8:30 – 9:30 PM',            name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'other' },
+    { time: '8:30 – 9:30 PM',            name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'open' },
   ]},
   { id: 'fri', label: 'Fri', classes: [
     { time: '10:00 AM – 12:00 PM',       name: 'Adult BJJ',                 tag: 'Adult · Gi',        tagClass: 'gi',     type: 'gi' },
@@ -40,11 +40,11 @@ const DAYS = [
     { time: '9:00 – 10:00 AM',           name: 'NoGi Fundamentals',         tag: 'Adult · NoGi',      tagClass: 'nogi',   type: 'nogi' },
     { time: '10:00 – 11:00 AM',          name: 'Striking',                  tag: 'Striking',          tagClass: 'kick',   type: 'striking' },
     { time: '11:00 AM – 12:00 PM',       name: 'Adult BJJ',                 tag: 'Adult · Gi',        tagClass: 'gi',     type: 'gi' },
-    { time: '12:00 – 1:00 PM',           name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'other' },
+    { time: '12:00 – 1:00 PM',           name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'open' },
   ]},
   { id: 'sun', label: 'Sun', classes: [
-    { time: '10:00 AM – 12:00 PM',       name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'other' },
-    { time: '6:00 – 8:00 PM',            name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'other' },
+    { time: '10:00 AM – 12:00 PM',       name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'open' },
+    { time: '6:00 – 8:00 PM',            name: 'Open Mat',                  tag: 'Open Mat',          tagClass: 'open',   type: 'open' },
   ]},
 ]
 
@@ -166,7 +166,7 @@ export default function Schedule() {
   const [active, setActive] = useState('mon')
   const [filter, setFilter] = useState('all')
   const day = DAYS.find(d => d.id === active)
-  const classes = filter === 'all' ? day.classes : day.classes.filter(c => c.type === filter)
+  const classes = filter === 'all' ? day.classes : day.classes.filter(c => c.type === filter || c.type === 'open')
 
   const pickFilter = (f) => {
     setFilter(f)
