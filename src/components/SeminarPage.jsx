@@ -47,8 +47,8 @@ export default function SeminarPage() {
 
           <p className={styles.text}>
             <strong>JT Torres</strong> — 2x ADCC champ, NoGi world champ — is on our mats
-            teaching his front headlock game. Technique, live rounds, then promotions to
-            close it out. Gi and nogi, all levels, everyone's welcome.
+            teaching his front headlock game. Technique, training, and promotions. Gi and
+            nogi, all levels, everyone's welcome.
           </p>
 
           <p className={styles.text}>
