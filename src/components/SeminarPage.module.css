@@ -1,0 +1,175 @@
+/* Standalone seminar page — a sales letter in the site's styling, under the
+   same announcement bar and navbar as the homepage. */
+
+.page { background: var(--white); padding-top: 108px; padding-bottom: 52px; }  /* clears the fixed bars */
+
+/* TEMPORARY work-in-progress banner — remove with the .wip markup */
+.wip {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 1002;
+  display: flex; align-items: center; justify-content: center;
+  padding: 11px 20px; text-align: center;
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -6px 22px rgba(0,0,0,0.10);
+  background: repeating-linear-gradient(
+    45deg, #f6f6f6, #f6f6f6 14px, #ededed 14px, #ededed 28px
+  );
+}
+.wip span {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: var(--white); padding: 7px 16px; border: 1px solid var(--border);
+  border-radius: 3px;
+  font-family: var(--body); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+}
+.wip i { color: #c89b2c; font-size: 12px; }
+
+/* LAYOUT */
+.wrap {
+  max-width: 1000px; margin: 0 auto;
+  padding: 48px 20px 64px;
+  display: grid; grid-template-columns: 360px 1fr; gap: 48px; align-items: start;
+}
+.flyerCol { position: sticky; top: 128px; }
+.flyer {
+  background: var(--white);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+  border-radius: 4px; padding: 12px;
+}
+.flyer img { width: 100%; display: block; border-radius: 2px; }
+
+/* past-seminar photo, framed like the sign-up modal card */
+.past {
+  margin-top: 32px; background: var(--white);
+  border-radius: 3px; padding: 12px 12px 4px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+}
+.past img { width: 100%; display: block; border-radius: 2px; }
+.past figcaption {
+  padding: 12px 4px; text-align: center;
+  font-family: var(--body); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+}
+
+/* LETTER — type matches the homepage sections */
+.eyebrow {
+  font-family: var(--body); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 18px; margin-bottom: 20px; border-bottom: 1px solid var(--border);
+}
+.title {
+  font-family: var(--body); font-size: var(--fs-h2); font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--black); line-height: 1.15; margin-bottom: 8px;
+}
+.text {
+  font-size: var(--fs-body); line-height: 1.65;
+  color: var(--text); margin-bottom: 16px;
+}
+.text strong { font-weight: 700; color: var(--black); }
+
+.details { width: 100%; border-collapse: collapse; margin-bottom: 26px; }
+.details tr { border-bottom: 1px solid var(--border); }
+.details td { padding: 11px 4px; font-size: var(--fs-body); }
+.details td:first-child {
+  font-family: var(--body); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); width: 104px;
+}
+.details td:last-child { font-weight: 600; text-align: right; }
+
+/* CTA — same button as the homepage contact form */
+.cta {
+  position: relative; overflow: hidden;
+  display: block; width: 100%; text-align: center;
+  padding: 14px; background: var(--black); color: #fff;
+  border: 2px solid var(--black); border-radius: 3px;
+  font-family: var(--body); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.16), 0 0 22px rgba(0,0,0,0.10);
+  cursor: pointer; transition: all 0.22s;
+}
+.cta:hover {
+  background: #333; border-color: #333;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.22), 0 0 28px rgba(0,0,0,0.14);
+}
+/* slow sheen that crosses the button every few seconds */
+.cta::after {
+  content: ''; position: absolute; top: 0; bottom: 0; left: -60%;
+  width: 45%; pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.13), transparent);
+  transform: skewX(-18deg);
+  animation: sheen 6.5s ease-in-out infinite;
+}
+@keyframes sheen {
+  0%   { left: -60%; }
+  22%  { left: 120%; }
+  100% { left: 120%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta::after { animation: none; opacity: 0; }
+}
+
+.countdown {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin-top: 12px;
+  font-family: var(--body); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+}
+.countdown::before {
+  content: ''; width: 7px; height: 7px; border-radius: 50%;
+  background: #c0392b; flex: none;
+}
+
+/* CONTACT — one tidy line under the countdown */
+.contact {
+  margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--border);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  text-align: center; gap: 8px 18px;
+}
+.contactLead {
+  font-family: var(--body); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+}
+.contact a {
+  font-size: 13px; font-weight: 600; color: var(--text);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 7px; transition: color 0.2s;
+}
+.contact a:hover { color: var(--black); }
+.contact i { font-size: 13px; color: var(--muted); transition: color 0.2s; }
+.contact a:hover i { color: var(--black); }
+
+/* SIGN-UP MODAL */
+.modalOverlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.72);
+  display: flex; align-items: center; justify-content: center; padding: 24px;
+}
+.modal {
+  position: relative; background: var(--white);
+  width: 100%; max-width: 420px; border-radius: 3px;
+  padding: 56px 28px; text-align: center;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+}
+.modalClose {
+  position: absolute; top: 10px; right: 12px;
+  background: none; border: none; cursor: pointer;
+  font-size: 16px; line-height: 1; color: var(--muted);
+  padding: 6px; transition: color 0.2s;
+}
+.modalClose:hover { color: var(--black); }
+.modalText {
+  font-family: var(--body); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--text);
+}
+
+@media (max-width: 860px) {
+  .wrap { grid-template-columns: 1fr; gap: 28px; padding: 28px 20px 44px; }
+  .flyerCol { position: static; max-width: 420px; margin: 0 auto; width: 100%; }
+}
+@media (max-width: 600px) {
+  .title { font-size: 27px; }
+  .contact { flex-direction: column; align-items: center; gap: 9px; }
+  .text, .details td { font-size: 15px; }
+  .details td:first-child { width: 88px; }
+}

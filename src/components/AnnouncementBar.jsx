@@ -1,9 +1,9 @@
 import styles from './AnnouncementBar.module.css'
 
-export default function AnnouncementBar({ openWaiver, onOpenWaiver, onCloseWaiver }) {
+export default function AnnouncementBar({ base = '', openWaiver, onOpenWaiver, onCloseWaiver }) {
   return (
     <>
-      <a href="#contact" className={styles.banner}>
+      <a href={base + '#contact'} className={styles.banner}>
         <span className={styles.bannerDot} />
         <span className={styles.bannerText}>Come in for a free trial class today!</span>
       </a>

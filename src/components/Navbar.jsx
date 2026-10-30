@@ -8,7 +8,7 @@ const links = [
   { label: 'Contact',     href: '#contact' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ base = '' }) {
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
 
@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       <nav className={styles.navbar}>
-        <a href="#hero" className={styles.logo} aria-label="RBJJ Home">
+        <a href={base || '#hero'} className={styles.logo} aria-label="RBJJ Home">
           <img src="/images/logo.png" alt="RBJJ Logo" style={{width:'100%',height:'100%',objectFit:'contain'}} />
         </a>
         <button
@@ -35,7 +35,7 @@ export default function Navbar() {
       {open && <div className={styles.overlay} onClick={close} />}
       <div className={`${styles.drawer} ${open ? styles.drawerOpen : ''}`}>
         {links.map(l => (
-          <a key={l.href} href={l.href} onClick={close}>{l.label}</a>
+          <a key={l.href} href={base + l.href} onClick={close}>{l.label}</a>
         ))}
       </div>
     </>
